@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/2"
+        android:id="@+id/TWO"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="2"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/SpinBtn" />
 
     <Button
-        android:id="@+id/1"
+        android:id="@+id/ONE"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="1"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/PlayerAmount" />
 
     <Button
-        android:id="@+id/5"
+        android:id="@+id/FIVE"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="5"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/SpinBtn" />
 
     <Button
-        android:id="@+id/10"
+        android:id="@+id/TEN"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="10"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/BetAmount" />
 
     <Button
-        android:id="@+id/20"
+        android:id="@+id/TWENTY"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="20"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/1" />
 
     <Button
-        android:id="@+id/50"
+        android:id="@+id/FIFTY"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="50"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/2" />
 
     <Button
-        android:id="@+id/100"
+        android:id="@+id/HUNDRED"
         android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:text="100"
