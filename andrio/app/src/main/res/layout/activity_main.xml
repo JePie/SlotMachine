@@ -136,10 +136,10 @@
 
     <TextView
         android:id="@+id/playerAmount"
-        android:layout_width="108dp"
+        android:layout_width="162dp"
         android:layout_height="41dp"
         android:text="Player Amount: "
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toTopOf="@+id/spin"
         app:layout_constraintEnd_toStartOf="@+id/playerBet"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,12 +147,12 @@
 
     <TextView
         android:id="@+id/playerBet"
-        android:layout_width="78dp"
+        android:layout_width="116dp"
         android:layout_height="44dp"
         android:layout_marginBottom="6dp"
         android:layout_marginTop="97dp"
         android:text="Bet: "
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toTopOf="@+id/b3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/playerAmount"
@@ -180,7 +180,7 @@
 
     <TextView
         android:id="@+id/msg"
-        android:layout_width="119dp"
+        android:layout_width="186dp"
         android:layout_height="50dp"
         android:text="msg"
         android:textAlignment="center"

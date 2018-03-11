@@ -2,6 +2,7 @@ package com.example.jackhuang.slotmachine;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView pBalance;
 
     //Player Bet
-    private int bet = 1;
+    private int bet = 0;
     private TextView playerBet;
 
     //Jackpot
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
     {
 
             R.drawable.ic_grapes,
-            R.drawable.ic_watermeloin,
+            R.drawable.ic_watermelon,
             R.drawable.ic_luckyseven
     };
 
@@ -72,29 +73,47 @@ public class MainActivity extends AppCompatActivity {
 
         Slot3 = findViewById(R.id.slot3);
 
+        setWin = new Random().nextInt(13)+5;
         //Beginning of buttons
         Button quit = findViewById(R.id.QuitBtn);
         quit.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        spinButton = findViewById(R.id.spin);
+        spinButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
                 ifcanspin();
             }
         });
 
-
-
         Button reset = findViewById(R.id.Reset);
         reset.setOnClickListener(new View.OnClickListener()
                                  {
-                                     public void onClick(View v){
-                                         bet = 0;
-                                         playerBet.setText("Bet: " +bet);
-                                         msg.setText("");
+                                     public void onClick(View v) {
+                                         reset();
                                          spinButton.setEnabled(true);
                                      }
                                  });
-
+        betting();
     }
+    public void reset()
+    {
+        playerAmount = 300;
+        bet = 0;
+        pBalance.setText("player money:"+playerAmount);
+        playerBet.setText("Bet: "+bet);
+
+        Slot1.setImageResource(DRAWABLE_ID[0]);
+        Slot2.setImageResource(DRAWABLE_ID[0]);
+        Slot3.setImageResource(DRAWABLE_ID[0]);
+
+        msg.setText("");
+    }
+
     public void ifcanspin(){
         if(bet == 0)
         msg.setText("you have to place a bet");
@@ -105,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
             msg.setText("No more Money");
 
         }
+        play++;
     }
     public void runSpin(){
         int chance1 = new Random().nextInt(3);
@@ -114,17 +134,16 @@ public class MainActivity extends AppCompatActivity {
         Slot1.setImageResource(DRAWABLE_ID[chance1]);
         Slot2.setImageResource(DRAWABLE_ID[chance2]);
         Slot3.setImageResource(DRAWABLE_ID[chance3]);
-
-        if(chance1+chance2+chance3==0) {
+        if(chance1==chance2 && chance2==chance3){
+            msg.setText("You Win");
+            isWin = true;
+        }else isWin=false;
+        
+        if(chance1+chance2+chance3==2) {
             msg.setText("YOU WON THE JACKPOT");
             playerAmount +=jackpot;
         }
-        if(chance1==chance2&&chance2==chance3){
-            msg.setText("You Win");
-            isWin = true;
-        }else{
-            isWin=false;
-        }
+
         //set must win condition to increase the rate of win
         if(play >= setWin && win < 5)
         {
@@ -147,17 +166,88 @@ public class MainActivity extends AppCompatActivity {
             win++;
             if(win >= 5) win = 0;
             playerAmount += bet;
-            pBalance.setText(""+playerAmount);
+            pBalance.setText("player money : "+playerAmount);
         }else{
             playerAmount -= bet;
             if(playerAmount < 0) playerAmount = 0;
-            pBalance.setText(""+playerAmount);
+            pBalance.setText("player money : "+playerAmount);
             msg.setText("You Lost!");
         }
 
         if(playerAmount ==0){
             bet = 0;
-            playerBet.setText("" + bet);
+            playerBet.setText("Bet: " + bet);
+        }
+        Log.d("setWinTime","setWinTime= " + setWin);
+        Log.d("playTimes"+"winTimes","play: "+ Integer.toString(play)+" | " + "win: "+ Integer.toString(win));
+
+    }
+    public void checkBet()
+    {
+        if(playerAmount<bet){
+            fundsAvailable = false;
+            msg.setText("Not enough money");
+            playerBet.setText("Bet: " + bet);
+            spinButton.setEnabled(false);
+        }else{
+            fundsAvailable = true;
+            msg.setText("");
+            playerBet.setText("Bet: " + bet);
+            spinButton.setEnabled(true);
+        }
+    }
+
+    public void betting()
+    {
+        playerBet = findViewById(R.id.playerBet);
+        playerBet.setText("Bet: "+bet);
+
+        for(int i=0; i<betButton.length; ++i)
+        {
+            String betButtonId = "b"+(i+1);
+            betButton[i] = findViewById(R.id.b1);
+            int resID = getResources().getIdentifier(betButtonId, "id", getPackageName());
+            betButton[i] = (findViewById(resID));
+            final int finalI = i;
+            betButton[i].setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v)
+                {
+                    switch(finalI) {
+                        case 0:
+                            bet += 1;
+                            checkBet();
+                            if(!fundsAvailable) bet -=1;
+                            break;
+                        case 1:
+                            bet += 5;
+                            checkBet();
+                            if(!fundsAvailable) bet -=5;
+                            break;
+                        case 2:
+                            bet += 10;
+                            checkBet();
+                            if(!fundsAvailable) bet -=10;
+                            break;
+                        case 3:
+                            bet += 20;
+                            checkBet();
+                            if(!fundsAvailable) bet -=20;
+                            break;
+                        case 4:
+                            bet += 50;
+                            checkBet();
+                            if(!fundsAvailable) bet -=50;
+                            break;
+                        case 5:
+                            bet += 100;
+                            checkBet();
+                            if(!fundsAvailable) bet -=100;
+                            break;
+                        default:
+                            break;
+                    }
+                    Log.d("bet ","Bet: "+ Integer.toString(bet));
+                }});
         }
 
     }
