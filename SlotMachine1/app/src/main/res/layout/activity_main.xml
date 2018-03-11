@@ -11,80 +11,91 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BlueCup"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="4dp" />
-
-    <Button
-        android:id="@+id/1"
-        android:layout_width="53dp"
-        android:layout_height="wrap_content"
-        android:text="1"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="334dp" />
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/2"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="2"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="334dp" />
+        app:layout_constraintBottom_toTopOf="@+id/50"
+        app:layout_constraintEnd_toStartOf="@+id/5"
+        app:layout_constraintStart_toEndOf="@+id/1"
+        app:layout_constraintTop_toBottomOf="@+id/SpinBtn" />
 
     <Button
         android:id="@+id/5"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="5"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="334dp" />
+        app:layout_constraintBottom_toTopOf="@+id/100"
+        app:layout_constraintEnd_toStartOf="@+id/10"
+        app:layout_constraintStart_toEndOf="@+id/2"
+        app:layout_constraintTop_toBottomOf="@+id/SpinBtn" />
 
     <Button
         android:id="@+id/10"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="10"
-        tools:layout_editor_absoluteX="315dp"
-        tools:layout_editor_absoluteY="334dp" />
+        app:layout_constraintBottom_toTopOf="@+id/ResetBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/5"
+        app:layout_constraintTop_toBottomOf="@+id/BetAmount" />
 
     <Button
         android:id="@+id/20"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="20"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/1" />
 
     <Button
         android:id="@+id/50"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="50"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/100"
+        app:layout_constraintStart_toEndOf="@+id/20"
+        app:layout_constraintTop_toBottomOf="@+id/2" />
 
     <Button
         android:id="@+id/100"
-        android:layout_width="53dp"
+        android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:text="100"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ResetBtn"
+        app:layout_constraintStart_toEndOf="@+id/50"
+        app:layout_constraintTop_toBottomOf="@+id/5"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/ResetBtn"
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:text="Reset"
-        tools:layout_editor_absoluteX="293dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/100"
+        app:layout_constraintTop_toBottomOf="@+id/10" />
 
     <Button
         android:id="@+id/SpinBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spin"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="257dp" />
+        app:layout_constraintBottom_toTopOf="@+id/2"
+        app:layout_constraintEnd_toStartOf="@+id/BetAmount"
+        app:layout_constraintStart_toEndOf="@+id/PlayerAmount"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <EditText
         android:id="@+id/PlayerAmount"
@@ -92,8 +103,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="257dp" />
+        app:layout_constraintBottom_toTopOf="@+id/1"
+        app:layout_constraintEnd_toStartOf="@+id/SpinBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <EditText
         android:id="@+id/BetAmount"
@@ -101,14 +114,29 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="292dp"
-        tools:layout_editor_absoluteY="257dp" />
+        app:layout_constraintBottom_toTopOf="@+id/10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SpinBtn"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="368dp"
         android:layout_height="83dp"
         android:entries="3"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="102dp" />
+        app:layout_constraintBottom_toTopOf="@+id/SpinBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <Button
+        android:id="@+id/1"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/20"
+        app:layout_constraintEnd_toStartOf="@+id/2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerAmount" />
 </android.support.constraint.ConstraintLayout>
