@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     {
 
             R.drawable.ic_grapes,
-            R.drawable.ic_watermeloin,
+            R.drawable.ic_watermelon,
             R.drawable.ic_luckyseven
     };
 
