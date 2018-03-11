@@ -24,44 +24,44 @@
         android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/b50"
-        app:layout_constraintEnd_toStartOf="@+id/b5"
+        app:layout_constraintBottom_toTopOf="@+id/b5"
+        app:layout_constraintEnd_toStartOf="@+id/b2"
         app:layout_constraintStart_toEndOf="@+id/spin"
         app:layout_constraintTop_toBottomOf="@+id/playerAmount" />
 
     <Button
-        android:id="@+id/b5"
+        android:id="@+id/b2"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:text="5"
-        app:layout_constraintBottom_toTopOf="@+id/b100"
-        app:layout_constraintEnd_toStartOf="@+id/b10"
+        app:layout_constraintBottom_toTopOf="@+id/b6"
+        app:layout_constraintEnd_toStartOf="@+id/b3"
         app:layout_constraintStart_toEndOf="@+id/b1"
         app:layout_constraintTop_toBottomOf="@+id/playerBet" />
 
     <Button
-        android:id="@+id/b10"
+        android:id="@+id/b3"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginTop="6dp"
         android:text="10"
         app:layout_constraintBottom_toTopOf="@+id/Reset"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/b5"
+        app:layout_constraintStart_toEndOf="@+id/b2"
         app:layout_constraintTop_toBottomOf="@+id/playerBet" />
 
     <Button
-        android:id="@+id/b20"
+        android:id="@+id/b4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="20"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/b50"
+        app:layout_constraintEnd_toStartOf="@+id/b5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spin" />
 
     <Button
-        android:id="@+id/b50"
+        android:id="@+id/b5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="50"
@@ -70,13 +70,13 @@
         app:layout_constraintTop_toBottomOf="@+id/b1" />
 
     <Button
-        android:id="@+id/b100"
+        android:id="@+id/b6"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:text="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/Reset"
-        app:layout_constraintStart_toEndOf="@+id/b50"
+        app:layout_constraintStart_toEndOf="@+id/b5"
         app:layout_constraintTop_toBottomOf="@+id/b1" />
 
     <Button
@@ -86,7 +86,7 @@
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/b100" />
+        app:layout_constraintStart_toEndOf="@+id/b6" />
 
     <ImageView
         android:id="@+id/slot1"
@@ -129,7 +129,7 @@
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:text="SPIN"
-        app:layout_constraintBottom_toTopOf="@+id/b20"
+        app:layout_constraintBottom_toTopOf="@+id/b4"
         app:layout_constraintEnd_toStartOf="@+id/b1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerAmount" />
@@ -153,7 +153,7 @@
         android:layout_marginTop="97dp"
         android:text="Bet: "
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/b10"
+        app:layout_constraintBottom_toTopOf="@+id/b3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/playerAmount"
         app:layout_constraintTop_toBottomOf="@+id/slot3" />
@@ -177,5 +177,16 @@
         android:text="Jackpot: 100000"
         tools:layout_editor_absoluteX="139dp"
         tools:layout_editor_absoluteY="324dp" />
+
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="119dp"
+        android:layout_height="50dp"
+        android:text="msg"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/currentJackpot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slot2" />
 
 </android.support.constraint.ConstraintLayout>
