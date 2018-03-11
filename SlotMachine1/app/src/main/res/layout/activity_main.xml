@@ -21,9 +21,9 @@
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="2"
-        app:layout_constraintBottom_toTopOf="@+id/50"
-        app:layout_constraintEnd_toStartOf="@+id/5"
-        app:layout_constraintStart_toEndOf="@+id/1"
+        app:layout_constraintBottom_toTopOf="@+id/FIFTY"
+        app:layout_constraintEnd_toStartOf="@+id/FIVE"
+        app:layout_constraintStart_toEndOf="@+id/ONE"
         app:layout_constraintTop_toBottomOf="@+id/SpinBtn" />
 
     <Button
@@ -31,8 +31,8 @@
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/20"
-        app:layout_constraintEnd_toStartOf="@+id/2"
+        app:layout_constraintBottom_toTopOf="@+id/TWENTY"
+        app:layout_constraintEnd_toStartOf="@+id/TWO"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PlayerAmount" />
 
@@ -41,9 +41,9 @@
         android:layout_width="53dp"
         android:layout_height="wrap_content"
         android:text="5"
-        app:layout_constraintBottom_toTopOf="@+id/100"
-        app:layout_constraintEnd_toStartOf="@+id/10"
-        app:layout_constraintStart_toEndOf="@+id/2"
+        app:layout_constraintBottom_toTopOf="@+id/HUNDRED"
+        app:layout_constraintEnd_toStartOf="@+id/TEN"
+        app:layout_constraintStart_toEndOf="@+id/TWO"
         app:layout_constraintTop_toBottomOf="@+id/SpinBtn" />
 
     <Button
@@ -53,7 +53,7 @@
         android:text="10"
         app:layout_constraintBottom_toTopOf="@+id/ResetBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/5"
+        app:layout_constraintStart_toEndOf="@+id/FIVE"
         app:layout_constraintTop_toBottomOf="@+id/BetAmount" />
 
     <Button
@@ -62,9 +62,9 @@
         android:layout_height="wrap_content"
         android:text="20"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/50"
+        app:layout_constraintEnd_toStartOf="@+id/FIFTY"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/1" />
+        app:layout_constraintTop_toBottomOf="@+id/ONE" />
 
     <Button
         android:id="@+id/FIFTY"
@@ -72,9 +72,9 @@
         android:layout_height="wrap_content"
         android:text="50"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/100"
-        app:layout_constraintStart_toEndOf="@+id/20"
-        app:layout_constraintTop_toBottomOf="@+id/2" />
+        app:layout_constraintEnd_toStartOf="@+id/HUNDRED"
+        app:layout_constraintStart_toEndOf="@+id/TWENTY"
+        app:layout_constraintTop_toBottomOf="@+id/TWO" />
 
     <Button
         android:id="@+id/HUNDRED"
@@ -83,8 +83,8 @@
         android:text="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ResetBtn"
-        app:layout_constraintStart_toEndOf="@+id/50"
-        app:layout_constraintTop_toBottomOf="@+id/5"
+        app:layout_constraintStart_toEndOf="@+id/FIFTY"
+        app:layout_constraintTop_toBottomOf="@+id/FIVE"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -94,15 +94,15 @@
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/100"
-        app:layout_constraintTop_toBottomOf="@+id/10" />
+        app:layout_constraintStart_toEndOf="@+id/HUNDRED"
+        app:layout_constraintTop_toBottomOf="@+id/TEN" />
 
     <Button
         android:id="@+id/SpinBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spin"
-        app:layout_constraintBottom_toTopOf="@+id/2"
+        app:layout_constraintBottom_toTopOf="@+id/TWO"
         app:layout_constraintEnd_toStartOf="@+id/BetAmount"
         app:layout_constraintStart_toEndOf="@+id/PlayerAmount"
         app:layout_constraintTop_toBottomOf="@+id/spinner2" />
@@ -113,7 +113,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/1"
+        app:layout_constraintBottom_toTopOf="@+id/ONE"
         app:layout_constraintEnd_toStartOf="@+id/SpinBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner2" />
@@ -124,7 +124,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/10"
+        app:layout_constraintBottom_toTopOf="@+id/TEN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/SpinBtn"
         app:layout_constraintTop_toBottomOf="@+id/spinner2" />
