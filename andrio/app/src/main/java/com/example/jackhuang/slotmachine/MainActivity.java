@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean fundsAvailable = false;
     private TextView noFunds;
 
+    //Variables for win condition
     private int play = 0;
     private int win = 0;
     private boolean isWin = false;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     {
 
             R.drawable.ic_grapes,
-            R.drawable.ic_watermeloin,
+            R.drawable.ic_watermelon,
             R.drawable.ic_luckyseven
     };
 
@@ -76,11 +77,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button reset = findViewById(R.id.Reset);
+      /*
+      //resets whole game
+      Button reset = findViewById(R.id.Reset);
         reset.setOnClickListener(new View.OnClickListener()
                                  {
 
                                  }
         );
+
+        */
     }
 }
