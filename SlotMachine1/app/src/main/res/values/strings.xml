@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SlotMachine1</string>
+    <string name="ONE">1</string>
+    <string name="TWO">2</string>
+    <string name="FIVE">5</string>
+    <string name="TEN">10</string>
+    <string name="TWENTY">20</string>
+    <string name="FIFTY">50</string>
+    <string name="HUNDRED">100</string>
+    <string name="Title">BlueCup</string>
+    <string name="ResetBtn">Reset</string>
+    <string name="SpinBtn">Spin</string>
 </resources>
