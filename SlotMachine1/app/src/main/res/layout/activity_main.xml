@@ -27,6 +27,16 @@
         app:layout_constraintTop_toBottomOf="@+id/SpinBtn" />
 
     <Button
+        android:id="@+id/1"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/20"
+        app:layout_constraintEnd_toStartOf="@+id/2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayerAmount" />
+
+    <Button
         android:id="@+id/5"
         android:layout_width="53dp"
         android:layout_height="wrap_content"
@@ -130,13 +140,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Title" />
 
-    <Button
-        android:id="@+id/1"
-        android:layout_width="53dp"
-        android:layout_height="wrap_content"
-        android:text="1"
-        app:layout_constraintBottom_toTopOf="@+id/20"
-        app:layout_constraintEnd_toStartOf="@+id/2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PlayerAmount" />
 </android.support.constraint.ConstraintLayout>
