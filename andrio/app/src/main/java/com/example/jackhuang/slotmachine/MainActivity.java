@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
     {
             R.drawable.ic_luckyseven,
             R.drawable.ic_grapes,
-            R.drawable.ic_watermelon
+            R.drawable.ic_watermelon,
+            R.drawable.ic_bell
 
     };
 
@@ -127,9 +128,9 @@ public class MainActivity extends AppCompatActivity {
         play++;
     }
     public void runSpin(){
-        int chance1 = new Random().nextInt(3);
-        int chance2 = new Random().nextInt(3);
-        int chance3 = new Random().nextInt(3);
+        int chance1 = new Random().nextInt(4);
+        int chance2 = new Random().nextInt(4);
+        int chance3 = new Random().nextInt(4);
 
         Slot1.setImageResource(DRAWABLE_ID[chance1]);
         Slot2.setImageResource(DRAWABLE_ID[chance2]);
