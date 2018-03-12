@@ -127,80 +127,7 @@ public class MainActivity extends AppCompatActivity {
         }
         play++;
     }
-    public void runSpin(){
-        int chance1 = new Random().nextInt(4);
-        int chance2 = new Random().nextInt(4);
-        int chance3 = new Random().nextInt(4);
 
-        Slot1.setImageResource(DRAWABLE_ID[chance1]);
-        Slot2.setImageResource(DRAWABLE_ID[chance2]);
-        Slot3.setImageResource(DRAWABLE_ID[chance3]);
-        if(chance1==chance2 && chance2==chance3){
-            msg.setText("You Win");
-            isWin = true;
-        }else isWin=false;
-        
-        if(chance1+chance2+chance3==0) {
-            msg.setText("YOU WON THE JACKPOT");
-            playerAmount +=jackpot;
-        }
-
-        //set must win condition to increase the rate of win
-        if(play >= setWin && win < 5)
-        {
-            Slot1.setImageResource(DRAWABLE_ID[chance1]);
-            Slot2.setImageResource(DRAWABLE_ID[chance1]);
-            Slot3.setImageResource(DRAWABLE_ID[chance1]);
-            msg.setText("You Won!");
-            isWin = true;
-            play = 0;
-            setWin = new Random().nextInt(setWin)+5;
-
-            //when getting the diamond in line
-            if (chance1 == 0) {
-                playerAmount += jackpot;
-                msg.setText("You Won the Jackpot!!!");
-            }
-        }
-
-        if(isWin){
-            win++;
-            if(win >= 5) win = 0;
-            playerAmount += bet;
-            bet =0;
-            playerBet.setText("Bet: "+bet );
-            pBalance.setText("player money : "+playerAmount);
-        }else{
-            playerAmount -= bet;
-            bet =0;
-            playerBet.setText("Bet: "+bet );
-            if(playerAmount < 0) playerAmount = 0;
-            pBalance.setText("player money : "+playerAmount);
-            msg.setText("You Lost!");
-        }
-
-        if(playerAmount ==0){
-            bet = 0;
-            playerBet.setText("Bet: " + bet);
-        }
-        Log.d("setWinTime","setWinTime= " + setWin);
-        Log.d("playTimes"+"winTimes","play: "+ Integer.toString(play)+" | " + "win: "+ Integer.toString(win));
-
-    }
-    public void checkBet()
-    {
-        if(playerAmount<bet){
-            fundsAvailable = false;
-            msg.setText("Not enough money");
-            playerBet.setText("Bet: " + bet);
-            spinButton.setEnabled(false);
-        }else{
-            fundsAvailable = true;
-            msg.setText("");
-            playerBet.setText("Bet: " + bet);
-            spinButton.setEnabled(true);
-        }
-    }
 
     public void betting()
     {
@@ -211,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
         {
             String betButtonId = "b"+(i+1);
             betButton[i] = findViewById(R.id.b1);
-            int resID = getResources().getIdentifier(betButtonId, "id", getPackageName());
+            int resID = getResources().getIdentifier(betButtonId,
+                    "id", getPackageName());
             betButton[i] = (findViewById(resID));
             final int finalI = i;
             betButton[i].setOnClickListener(new View.OnClickListener() {
@@ -257,4 +185,78 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void checkBet()
+    {
+        if(playerAmount<bet){
+            fundsAvailable = false;
+            msg.setText("Not enough money");
+            playerBet.setText("Bet: " + bet);
+            spinButton.setEnabled(false);
+        }else{
+            fundsAvailable = true;
+            msg.setText("");
+            playerBet.setText("Bet: " + bet);
+            spinButton.setEnabled(true);
+        }
+    }
+    public void runSpin(){
+        int chance1 = new Random().nextInt(4);
+        int chance2 = new Random().nextInt(4);
+        int chance3 = new Random().nextInt(4);
+
+        Slot1.setImageResource(DRAWABLE_ID[chance1]);
+        Slot2.setImageResource(DRAWABLE_ID[chance2]);
+        Slot3.setImageResource(DRAWABLE_ID[chance3]);
+        if(chance1==chance2 && chance2==chance3){
+            msg.setText("You Win");
+            isWin = true;
+        }else isWin=false;
+
+        if(chance1+chance2+chance3==0) {
+            msg.setText("YOU WON THE JACKPOT");
+            playerAmount +=jackpot;
+        }
+
+        //set must win condition to increase the rate of win
+        if(play >= setWin && win < 5)
+        {
+            Slot1.setImageResource(DRAWABLE_ID[chance1]);
+            Slot2.setImageResource(DRAWABLE_ID[chance1]);
+            Slot3.setImageResource(DRAWABLE_ID[chance1]);
+            msg.setText("You Won!");
+            isWin = true;
+            play = 0;
+            setWin = new Random().nextInt(setWin)+5;
+
+            //when getting the diamond in line
+            if (chance1 == 0) {
+                playerAmount += jackpot;
+                msg.setText("You Won the Jackpot!!!");
+            }
+        }
+
+        if(isWin){
+            win++;
+            if(win >= 5) win = 0;
+            playerAmount += bet;
+            bet =0;
+            playerBet.setText("Bet: "+bet );
+            pBalance.setText("Player money : "+playerAmount);
+        }else{
+            playerAmount -= bet;
+            bet =0;
+            playerBet.setText("Bet: "+bet );
+            if(playerAmount < 0) playerAmount = 0;
+            pBalance.setText("Player money : "+playerAmount);
+            msg.setText("You Lost!");
+        }
+
+        if(playerAmount ==0){
+            bet = 0;
+            playerBet.setText("Bet: " + bet);
+        }
+        Log.d("setWinTime","setWinTime= " + setWin);
+        Log.d("playTimes"+"winTimes","play: "+ Integer.toString(play)+" | " + "win: "+ Integer.toString(win));
+
+    }
 }
