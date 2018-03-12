@@ -166,9 +166,13 @@ public class MainActivity extends AppCompatActivity {
             win++;
             if(win >= 5) win = 0;
             playerAmount += bet;
+            bet =0;
+            playerBet.setText("Bet: "+bet );
             pBalance.setText("player money : "+playerAmount);
         }else{
             playerAmount -= bet;
+            bet =0;
+            playerBet.setText("Bet: "+bet );
             if(playerAmount < 0) playerAmount = 0;
             pBalance.setText("player money : "+playerAmount);
             msg.setText("You Lost!");
