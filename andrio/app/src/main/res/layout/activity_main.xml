@@ -43,8 +43,7 @@
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
+
         android:layout_marginTop="8dp"
         android:text="5"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,8 +58,7 @@
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginStart="8dp"
+
         android:layout_marginTop="8dp"
         android:text="10"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -75,8 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="1dp"
+
         android:layout_marginTop="8dp"
         android:text="20"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -107,8 +104,7 @@
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="4dp"
+
         android:layout_marginTop="8dp"
         android:text="100"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -123,8 +119,7 @@
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginStart="8dp"
+
         android:layout_marginTop="8dp"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -186,8 +181,7 @@
         android:layout_width="88dp"
         android:layout_height="49dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="1dp"
+
         android:layout_marginTop="8dp"
         android:text="SPIN"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -205,20 +199,9 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Player Amount: "
-<<<<<<< HEAD
-        android:textAlignment="textStart"
+
         app:layout_constraintBottom_toTopOf="@+id/spin"
-        app:layout_constraintEnd_toStartOf="@+id/playerBet"
-=======
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
->>>>>>> 8b44735860c55334e346042fb5948bc023f3bb4c
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
+        app:layout_constraintEnd_toStartOf="@+id/playerBet"/>
 
     <TextView
         android:id="@+id/playerBet"
@@ -227,20 +210,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Bet: "
-<<<<<<< HEAD
-        android:textAlignment="textStart"
-        app:layout_constraintBottom_toTopOf="@+id/b3"
-=======
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
->>>>>>> 8b44735860c55334e346042fb5948bc023f3bb4c
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.724"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.698" />
+        android:layout_marginTop="8dp"/>
 
     <Button
         android:id="@+id/QuitBtn"
@@ -282,7 +252,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="msg"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

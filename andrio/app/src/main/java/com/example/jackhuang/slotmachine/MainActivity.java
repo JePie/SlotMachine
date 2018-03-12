@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
     static int DRAWABLE_ID[] =
     {
-
+            R.drawable.ic_luckyseven,
             R.drawable.ic_grapes,
-            R.drawable.ic_watermelon,
-            R.drawable.ic_luckyseven
+            R.drawable.ic_watermelon
+
     };
 
     private TextView msg;
@@ -134,12 +134,12 @@ public class MainActivity extends AppCompatActivity {
         Slot1.setImageResource(DRAWABLE_ID[chance1]);
         Slot2.setImageResource(DRAWABLE_ID[chance2]);
         Slot3.setImageResource(DRAWABLE_ID[chance3]);
-        if(chance1==chance2 && chance2==chance3){
+        if(chance1==chance2 || chance2==chance3){
             msg.setText("You Win");
             isWin = true;
         }else isWin=false;
         
-        if(chance1+chance2+chance3==2) {
+        if(chance1+chance2+chance3==0) {
             msg.setText("YOU WON THE JACKPOT");
             playerAmount +=jackpot;
         }
