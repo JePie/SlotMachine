@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         Slot1.setImageResource(DRAWABLE_ID[chance1]);
         Slot2.setImageResource(DRAWABLE_ID[chance2]);
         Slot3.setImageResource(DRAWABLE_ID[chance3]);
-        if(chance1==chance2 || chance2==chance3){
+        if(chance1==chance2 && chance2==chance3){
             msg.setText("You Win");
             isWin = true;
         }else isWin=false;
