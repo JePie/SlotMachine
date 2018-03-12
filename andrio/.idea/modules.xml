@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/andrio.iml" filepath="$PROJECT_DIR$/andrio.iml" />
-      <module fileurl="file://C:\Users\user\Documents\GitHub\SlotMachine\andrio\andrio.iml" filepath="C:\Users\user\Documents\GitHub\SlotMachine\andrio\andrio.iml" />
       <module fileurl="file://C:\Users\Tech\Documents\GitHub\SlotMachine\andrio\andrio.iml" filepath="C:\Users\Tech\Documents\GitHub\SlotMachine\andrio\andrio.iml" />
+      <module fileurl="file://C:\Users\user\Documents\GitHub\SlotMachine\andrio\andrio.iml" filepath="C:\Users\user\Documents\GitHub\SlotMachine\andrio\andrio.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\Users\Tech\Documents\GitHub\SlotMachine\andrio\app\app.iml" filepath="C:\Users\Tech\Documents\GitHub\SlotMachine\andrio\app\app.iml" />
       <module fileurl="file://C:\Users\user\Documents\GitHub\SlotMachine\andrio\app\app.iml" filepath="C:\Users\user\Documents\GitHub\SlotMachine\andrio\app\app.iml" />
+      <module fileurl="file://C:\Users\Tech\Documents\GitHub\SlotMachine\andrio\app\app.iml" filepath="C:\Users\Tech\Documents\GitHub\SlotMachine\andrio\app\app.iml" />
     </modules>
   </component>
 </project>
